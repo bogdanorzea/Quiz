@@ -44,27 +44,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baw-PE-B3d">
+                                <rect key="frame" x="166.5" y="44" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Hbe-3g-G4M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5iA-lj-dTp"/>
-                            <constraint firstItem="OzS-CM-SrE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="6sa-ed-3dO"/>
-                            <constraint firstItem="fWE-nJ-9i2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vog-Uh-bR9"/>
-                            <constraint firstItem="OzS-CM-SrE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wzy-Z6-YLf"/>
-                            <constraint firstItem="Hbe-3g-G4M" firstAttribute="top" secondItem="OzS-CM-SrE" secondAttribute="bottom" constant="8" id="pJI-Ak-Y89"/>
-                            <constraint firstItem="rWV-Su-f6r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qoe-bk-FQE"/>
-                            <constraint firstItem="fWE-nJ-9i2" firstAttribute="top" secondItem="rWV-Su-f6r" secondAttribute="bottom" constant="8" id="rsF-3f-CCA"/>
-                            <constraint firstItem="rWV-Su-f6r" firstAttribute="top" secondItem="Hbe-3g-G4M" secondAttribute="bottom" constant="64" id="tgP-4M-73g"/>
+                            <constraint firstItem="baw-PE-B3d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="1L6-G8-qRG"/>
+                            <constraint firstItem="OzS-CM-SrE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2Jt-KE-8kZ"/>
+                            <constraint firstItem="Hbe-3g-G4M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6zk-B3-zvb"/>
+                            <constraint firstItem="rWV-Su-f6r" firstAttribute="top" secondItem="Hbe-3g-G4M" secondAttribute="bottom" constant="64" id="8gO-cl-1uj"/>
+                            <constraint firstItem="fWE-nJ-9i2" firstAttribute="centerX" secondItem="Hbe-3g-G4M" secondAttribute="centerX" id="A99-eI-grd"/>
+                            <constraint firstItem="baw-PE-B3d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dot-T2-4eM"/>
+                            <constraint firstItem="rWV-Su-f6r" firstAttribute="centerX" secondItem="Hbe-3g-G4M" secondAttribute="centerX" id="MVC-kp-7K2"/>
+                            <constraint firstItem="fWE-nJ-9i2" firstAttribute="top" secondItem="rWV-Su-f6r" secondAttribute="bottom" constant="8" id="MfM-zu-k0G"/>
+                            <constraint firstItem="OzS-CM-SrE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="XyV-w1-34H"/>
+                            <constraint firstItem="Hbe-3g-G4M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="s2i-DN-gXB"/>
+                            <constraint firstItem="rWV-Su-f6r" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zN1-O9-KDO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="rWV-Su-f6r" id="Qoc-rD-UQQ"/>
-                        <outlet property="questionLabel" destination="OzS-CM-SrE" id="bcV-Xh-C1W"/>
+                        <outlet property="currentQuestionLabel" destination="OzS-CM-SrE" id="0Fn-HA-yeB"/>
+                        <outlet property="currentQuestionLabelCenterXConstraint" destination="2Jt-KE-8kZ" id="lcW-tS-P9J"/>
+                        <outlet property="nextQuestionLabel" destination="baw-PE-B3d" id="PmV-1h-kA3"/>
+                        <outlet property="nextQuestionLabelCenterXConstraint" destination="Dot-T2-4eM" id="8cW-bf-X00"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
 </document>
