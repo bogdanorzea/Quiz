@@ -58,26 +58,20 @@ class ViewController: UIViewController {
         view.layoutIfNeeded()
         
         // Animate the alpha and center X coordinates
-        let screenWidth = view.frame.width
         self.nextQuestionLabelCenterXConstraint.constant = 0
-        self.currentQuestionLabelCenterXConstraint.constant += screenWidth
+        self.currentQuestionLabelCenterXConstraint = NSLayoutConstraint(item: currentQuestionLabel, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0)
+        currentQuestionLabelCenterXConstraint.isActive = true
         
-        UIView.animate(
-            withDuration: 0.5,
-            delay: 0,
-            options: [.curveLinear],
-            animations: {
-                self.currentQuestionLabel.alpha = 0
-                self.nextQuestionLabel.alpha = 1
-                
-                self.view.layoutIfNeeded()
-            },
-            completion: { _ in
-                swap(&self.currentQuestionLabel, &self.nextQuestionLabel)
-                swap(&self.nextQuestionLabelCenterXConstraint, &self.currentQuestionLabelCenterXConstraint)
-                
-                self.updateOffScreenLabel()
-                
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: [], animations: {
+            self.currentQuestionLabel.alpha = 0
+            self.nextQuestionLabel.alpha = 1
+            
+            self.view.layoutIfNeeded()
+        }, completion: { _ in
+            swap(&self.currentQuestionLabel, &self.nextQuestionLabel)
+            swap(&self.nextQuestionLabelCenterXConstraint, &self.currentQuestionLabelCenterXConstraint)
+            
+            self.updateOffScreenLabel()
         })
     }
     
